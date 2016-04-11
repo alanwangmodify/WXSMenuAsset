@@ -18,6 +18,7 @@
 		92D98B8C1CBB5F7400B28C65 /* PointDownMenuDemmoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D98B8B1CBB5F7400B28C65 /* PointDownMenuDemmoVC.m */; };
 		92D98B981CBB8B7300B28C65 /* WXSPointDownMenu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 92D98B951CBB8B7300B28C65 /* WXSPointDownMenu.bundle */; };
 		92D98B991CBB8B7300B28C65 /* WXSPointDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D98B971CBB8B7300B28C65 /* WXSPointDownMenu.m */; };
+		92D98B9C1CBB9B6900B28C65 /* WXSMenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D98B9B1CBB9B6900B28C65 /* WXSMenuItemCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		92D98B951CBB8B7300B28C65 /* WXSPointDownMenu.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WXSPointDownMenu.bundle; sourceTree = "<group>"; };
 		92D98B961CBB8B7300B28C65 /* WXSPointDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSPointDownMenu.h; sourceTree = "<group>"; };
 		92D98B971CBB8B7300B28C65 /* WXSPointDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXSPointDownMenu.m; sourceTree = "<group>"; };
+		92D98B9A1CBB9B6900B28C65 /* WXSMenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSMenuItemCell.h; sourceTree = "<group>"; };
+		92D98B9B1CBB9B6900B28C65 /* WXSMenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXSMenuItemCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,8 @@
 				92D98B951CBB8B7300B28C65 /* WXSPointDownMenu.bundle */,
 				92D98B961CBB8B7300B28C65 /* WXSPointDownMenu.h */,
 				92D98B971CBB8B7300B28C65 /* WXSPointDownMenu.m */,
+				92D98B9A1CBB9B6900B28C65 /* WXSMenuItemCell.h */,
+				92D98B9B1CBB9B6900B28C65 /* WXSMenuItemCell.m */,
 			);
 			path = WXSPointDownMenu;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92D98B9C1CBB9B6900B28C65 /* WXSMenuItemCell.m in Sources */,
 				92D98B511CBB33D600B28C65 /* ViewController.m in Sources */,
 				92D98B4E1CBB33D600B28C65 /* AppDelegate.m in Sources */,
 				92D98B8C1CBB5F7400B28C65 /* PointDownMenuDemmoVC.m in Sources */,

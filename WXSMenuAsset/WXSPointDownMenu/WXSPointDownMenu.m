@@ -17,6 +17,8 @@
 @property (nonatomic,strong) NSMutableArray *lines;
 @property (nonatomic,assign) CGFloat menuHeight;
 
+
+
 @end
 @implementation WXSPointDownMenu
 
@@ -30,6 +32,8 @@
         _imgNames = images;
         _clickIndexCallBack =  [clickIndex copy];
         _menuHeight = btnListFram.size.height;
+        _textColor = UIColorFromRGB(0x666666);
+        _selectedTextColor = UIColorFromRGB(0xe83260);
         
         //backImgView
         [self addSubview:self.backgImgView];
@@ -50,8 +54,10 @@
 #pragma mark Data
 
 -(void)setTextColor:(UIColor *)textColor {
-    
+    self.textColor = textColor;
+    [self.tableView reloadData];
 }
+
 #pragma mark View
 -(UIImageView *)backgImgView {
     if (!_backgImgView) {
@@ -132,9 +138,9 @@
     
     cell.textLabel.font = [UIFont systemFontOfSize:12.0f];
     if (_isSelect == YES) {
-        cell.textLabel.textColor = indexPath.row == self.selectIndex? UIColorFromRGB(0xe83260):UIColorFromRGB(0xaaaaaa);
+        cell.textLabel.textColor = indexPath.row == self.selectIndex? self.selectedTextColor:self.textColor;
     }else {
-        cell.textLabel.textColor = UIColorFromRGB(0x666666);
+        cell.textLabel.textColor = self.textColor;
     }
     
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
@@ -154,6 +160,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     return 33.0f;
 }
 

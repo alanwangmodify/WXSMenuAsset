@@ -20,7 +20,17 @@ typedef void(^ClickIndexBlock) (NSInteger clickIndex);
  */
 @property (nonatomic,assign) NSInteger selectIndex;
 
+
+/**
+ *  color of text
+ */
 @property (nonatomic,strong) UIColor *textColor;
+@property (nonatomic,strong) UIColor *selectedTextColor;
+
+/**
+ *  height of row . default: 33.0
+ */
+@property (nonatomic,assign) CGFloat rowHeight;
 
 /**
  *  Init Method

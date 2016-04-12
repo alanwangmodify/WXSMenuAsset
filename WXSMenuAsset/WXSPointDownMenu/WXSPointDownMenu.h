@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "WXSConfig.h"
+#import "WXSMenuItemCell.h"
 typedef void(^ClickIndexBlock) (NSInteger clickIndex);
 
 @interface WXSPointDownMenu : UIView <UITableViewDataSource,UIGestureRecognizerDelegate,UITableViewDelegate>

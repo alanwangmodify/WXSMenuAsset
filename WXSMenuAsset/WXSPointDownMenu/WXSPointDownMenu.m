@@ -42,6 +42,7 @@
         NSString *imagePath = [bundle pathForResource:@"pointDownMenu_bg" ofType:@"png"];
         UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
         _backgImgView.image = [image stretchableImageWithLeftCapWidth:15 topCapHeight:20];
+        [_backgImgView setContentMode:UIViewContentModeScaleToFill];
         _backgImgView.frame = CGRectMake(btnListFram.origin.x, btnListFram.origin.y, btnListFram.size.width, 0);
         
         
@@ -103,6 +104,8 @@
     }];
 }
 -(void)show {
+    
+    
     [UIView animateWithDuration:0.15f animations:^{
         CGRect rect = _backgImgView.frame;
         rect.size.height = _menuHeight;

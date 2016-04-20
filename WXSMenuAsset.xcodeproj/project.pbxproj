@@ -19,6 +19,9 @@
 		92D98B981CBB8B7300B28C65 /* WXSPointDownMenu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 92D98B951CBB8B7300B28C65 /* WXSPointDownMenu.bundle */; };
 		92D98B991CBB8B7300B28C65 /* WXSPointDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D98B971CBB8B7300B28C65 /* WXSPointDownMenu.m */; };
 		92D98B9C1CBB9B6900B28C65 /* WXSMenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D98B9B1CBB9B6900B28C65 /* WXSMenuItemCell.m */; };
+		92D98BE51CBCDB2E00B28C65 /* WXSBubbleMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D98BE41CBCDB2E00B28C65 /* WXSBubbleMenu.m */; };
+		92D98BE81CBCFD8D00B28C65 /* WXSBubbleBtnItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D98BE71CBCFD8D00B28C65 /* WXSBubbleBtnItem.m */; };
+		92D98C311CBE347500B28C65 /* BubbleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D98C301CBE347500B28C65 /* BubbleMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,12 @@
 		92D98B971CBB8B7300B28C65 /* WXSPointDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXSPointDownMenu.m; sourceTree = "<group>"; };
 		92D98B9A1CBB9B6900B28C65 /* WXSMenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSMenuItemCell.h; sourceTree = "<group>"; };
 		92D98B9B1CBB9B6900B28C65 /* WXSMenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXSMenuItemCell.m; sourceTree = "<group>"; };
+		92D98BE31CBCDB2E00B28C65 /* WXSBubbleMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSBubbleMenu.h; sourceTree = "<group>"; };
+		92D98BE41CBCDB2E00B28C65 /* WXSBubbleMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXSBubbleMenu.m; sourceTree = "<group>"; };
+		92D98BE61CBCFD8D00B28C65 /* WXSBubbleBtnItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSBubbleBtnItem.h; sourceTree = "<group>"; };
+		92D98BE71CBCFD8D00B28C65 /* WXSBubbleBtnItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXSBubbleBtnItem.m; sourceTree = "<group>"; };
+		92D98C2F1CBE347500B28C65 /* BubbleMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleMenuViewController.h; sourceTree = "<group>"; };
+		92D98C301CBE347500B28C65 /* BubbleMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +128,9 @@
 				92D98B501CBB33D600B28C65 /* ViewController.m */,
 				92D98B8A1CBB5F7400B28C65 /* PointDownMenuDemmoVC.h */,
 				92D98B8B1CBB5F7400B28C65 /* PointDownMenuDemmoVC.m */,
+				92D98C2F1CBE347500B28C65 /* BubbleMenuViewController.h */,
+				92D98C301CBE347500B28C65 /* BubbleMenuViewController.m */,
+				92D98BE21CBCD99500B28C65 /* WXSBubbleMenu */,
 				92D98B931CBB8B7300B28C65 /* WXSPointDownMenu */,
 				92D98B521CBB33D600B28C65 /* Main.storyboard */,
 				92D98B551CBB33D600B28C65 /* Assets.xcassets */,
@@ -166,6 +178,17 @@
 				92D98B9B1CBB9B6900B28C65 /* WXSMenuItemCell.m */,
 			);
 			path = WXSPointDownMenu;
+			sourceTree = "<group>";
+		};
+		92D98BE21CBCD99500B28C65 /* WXSBubbleMenu */ = {
+			isa = PBXGroup;
+			children = (
+				92D98BE31CBCDB2E00B28C65 /* WXSBubbleMenu.h */,
+				92D98BE41CBCDB2E00B28C65 /* WXSBubbleMenu.m */,
+				92D98BE61CBCFD8D00B28C65 /* WXSBubbleBtnItem.h */,
+				92D98BE71CBCFD8D00B28C65 /* WXSBubbleBtnItem.m */,
+			);
+			path = WXSBubbleMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +258,7 @@
 				TargetAttributes = {
 					92D98B451CBB33D600B28C65 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 72C37578YG;
 					};
 					92D98B5E1CBB33D700B28C65 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -300,10 +324,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				92D98B9C1CBB9B6900B28C65 /* WXSMenuItemCell.m in Sources */,
+				92D98BE51CBCDB2E00B28C65 /* WXSBubbleMenu.m in Sources */,
 				92D98B511CBB33D600B28C65 /* ViewController.m in Sources */,
 				92D98B4E1CBB33D600B28C65 /* AppDelegate.m in Sources */,
 				92D98B8C1CBB5F7400B28C65 /* PointDownMenuDemmoVC.m in Sources */,
 				92D98B4B1CBB33D600B28C65 /* main.m in Sources */,
+				92D98BE81CBCFD8D00B28C65 /* WXSBubbleBtnItem.m in Sources */,
+				92D98C311CBE347500B28C65 /* BubbleMenuViewController.m in Sources */,
 				92D98B991CBB8B7300B28C65 /* WXSPointDownMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,7 +472,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WXSMenuAsset/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WSX.WXSMenuAsset;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -456,7 +485,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WXSMenuAsset/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WSX.WXSMenuAsset;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -530,6 +561,7 @@
 				92D98B751CBB33D700B28C65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		92D98B761CBB33D700B28C65 /* Build configuration list for PBXNativeTarget "WXSMenuAssetTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +570,7 @@
 				92D98B781CBB33D700B28C65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		92D98B791CBB33D700B28C65 /* Build configuration list for PBXNativeTarget "WXSMenuAssetUITests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +579,7 @@
 				92D98B7B1CBB33D700B28C65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

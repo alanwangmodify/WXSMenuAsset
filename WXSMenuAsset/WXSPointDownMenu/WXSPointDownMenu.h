@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "WXSConfig.h"
 #import "WXSMenuItemCell.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
 typedef void(^ClickIndexBlock) (NSInteger clickIndex);
 
 @interface WXSPointDownMenu : UIView <UITableViewDataSource,UIGestureRecognizerDelegate,UITableViewDelegate>
@@ -50,6 +53,10 @@ typedef void(^ClickIndexBlock) (NSInteger clickIndex);
 
 -(void)show;
 -(void)hideView;
+
+-(instancetype)init UNAVAILABLE_ATTRIBUTE;
+-(instancetype)initWithFrame:(CGRect)frame UNAVAILABLE_ATTRIBUTE;
+-(instancetype)initWithCoder:(NSCoder *)aDecoder UNAVAILABLE_ATTRIBUTE;
 
 
 //============================  Class Method  ===========================================
@@ -95,3 +102,5 @@ typedef void(^ClickIndexBlock) (NSInteger clickIndex);
 +(void)showWithFrame:(CGRect )rect titles:(NSArray *)btnNames andImges:(NSArray *)ImgNames atView:(UIView*)view selectIndex:(NSUInteger)index clickIndex:(ClickIndexBlock)clickIndex ;
 
 @end
+
+NS_ASSUME_NONNULL_END

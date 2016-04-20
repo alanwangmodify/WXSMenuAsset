@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PointDownMenuDemmoVC.h"
+#import "BubbleMenuViewController.h"
 @interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 

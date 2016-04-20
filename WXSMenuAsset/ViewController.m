@@ -41,12 +41,38 @@
     if (!cell) {
         cell  = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Identifier];
     }
+    switch (indexPath.row) {
+        case 0:
+            cell.textLabel.text = @"pointDown";
+            break;
+        case 1:
+            cell.textLabel.text = @"bubbleMenu";
+        default:
+            break;
+    }
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    PointDownMenuDemmoVC *vc = [[PointDownMenuDemmoVC alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    switch (indexPath.row) {
+        case 0:{
+            PointDownMenuDemmoVC *vc = [[PointDownMenuDemmoVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        case 1:{
+            BubbleMenuViewController *vc = [[BubbleMenuViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+
+        }
+            break;
+        default:{
+            
+        }
+            break;
+    }
+    
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     

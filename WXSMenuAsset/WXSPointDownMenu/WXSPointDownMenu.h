@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void(^ClickIndexBlock) (NSInteger clickIndex);
 
 @interface WXSPointDownMenu : UIView <UITableViewDataSource,UIGestureRecognizerDelegate,UITableViewDelegate>
+
+
 /**
  *  YES - can show selected state
  */
@@ -24,6 +26,17 @@ typedef void(^ClickIndexBlock) (NSInteger clickIndex);
  */
 @property (nonatomic,assign) NSInteger selectIndex;
 
+/**
+ *   show the image of background  default : NO
+ */
+@property (nonatomic,assign) BOOL  showBackgroundImg;
+
+
+/**
+ *   background color of list defult :[UIColor whiteColor]
+ */
+@property (nonatomic,strong) UIColor *bgColor;
+
 
 /**
  *  color of text
@@ -32,7 +45,12 @@ typedef void(^ClickIndexBlock) (NSInteger clickIndex);
 @property (nonatomic,strong) UIColor *selectedTextColor;
 
 /**
- *  height of row . default: 33.0
+ *  font of text 。 defult : [UIFont systemFontOfSize:12.0f]
+ */
+@property (nonatomic,strong) UIFont  *textFont;
+
+/**
+ *  height of row . default: 40.0
  */
 @property (nonatomic,assign) CGFloat rowHeight;
 
@@ -57,6 +75,7 @@ typedef void(^ClickIndexBlock) (NSInteger clickIndex);
 -(instancetype)init UNAVAILABLE_ATTRIBUTE;
 -(instancetype)initWithFrame:(CGRect)frame UNAVAILABLE_ATTRIBUTE;
 -(instancetype)initWithCoder:(NSCoder *)aDecoder UNAVAILABLE_ATTRIBUTE;
+-(void)setBackgroundColor:(UIColor *)backgroundColor UNAVAILABLE_ATTRIBUTE;
 
 
 //============================  Class Method  ===========================================
@@ -68,7 +87,7 @@ typedef void(^ClickIndexBlock) (NSInteger clickIndex);
  *  @param btnNames   a array of buttons' name
   *  @param clickIndex a block call back click action with index
  */
-+(void)showWithFrame:(CGRect)rect titles:(NSArray *)btnNames clickIndex:(ClickIndexBlock)clickIndex;
++(WXSPointDownMenu *)showWithFrame:(CGRect)rect titles:(NSArray *)btnNames clickIndex:(ClickIndexBlock)clickIndex;
 
 /**
  *  a method for showing menu on window
@@ -78,7 +97,7 @@ typedef void(^ClickIndexBlock) (NSInteger clickIndex);
  *  @param ImgNames   a array of images' name
  *  @param clickIndex a block call back click action with index
  */
-+(void)showWithFrame:(CGRect)rect titles:(NSArray *)btnNames andImges:(NSArray *)ImgNames clickIndex:(ClickIndexBlock)clickIndex;
++(WXSPointDownMenu *)showWithFrame:(CGRect)rect titles:(NSArray *)btnNames andImges:(NSArray *)ImgNames clickIndex:(ClickIndexBlock)clickIndex;
 /**
  *  a method for showing menu on a superview
  *
@@ -88,7 +107,7 @@ typedef void(^ClickIndexBlock) (NSInteger clickIndex);
  *  @param view       a superview that menu show at
  *  @param clickIndex a block call back click action with index
  */
-+(void)showWithFrame:(CGRect )rect titles:(NSArray *)btnNames andImges:(NSArray *)ImgNames atView:(UIView*)view clickIndex:(ClickIndexBlock)clickIndex;
++(WXSPointDownMenu *)showWithFrame:(CGRect )rect titles:(NSArray *)btnNames andImges:(NSArray *)ImgNames atView:(UIView*)view clickIndex:(ClickIndexBlock)clickIndex;
 /**
  *  a method for showing menu on a superview
  *
@@ -99,7 +118,7 @@ typedef void(^ClickIndexBlock) (NSInteger clickIndex);
  *  @param clickIndex a block call back click action with index
  *  @param index      button index
  */
-+(void)showWithFrame:(CGRect )rect titles:(NSArray *)btnNames andImges:(NSArray *)ImgNames atView:(UIView*)view selectIndex:(NSUInteger)index clickIndex:(ClickIndexBlock)clickIndex ;
++(WXSPointDownMenu *)showWithFrame:(CGRect )rect titles:(NSArray *)btnNames andImges:(NSArray *)ImgNames atView:(UIView*)view selectIndex:(NSUInteger)index clickIndex:(ClickIndexBlock)clickIndex ;
 
 @end
 
